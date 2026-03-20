@@ -5,6 +5,8 @@ import Root from "./routes/root";
 import Home from "./routes/Home/Home";
 import Portfolio from "./routes/Portfolio/Portfolio";
 import { ThemeProvider } from "./theme-provider";
+import CV from "./routes/CV/CV";
+import About from "./routes/About/About";
 
 const router = createHashRouter([
   {
@@ -18,6 +20,14 @@ const router = createHashRouter([
       {
         path: "/portfolio",
         element: <Portfolio />,
+      },
+      {
+        path: "/cv",
+        element: <CV />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },

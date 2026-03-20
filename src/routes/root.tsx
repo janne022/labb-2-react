@@ -1,12 +1,10 @@
-import { Link, Outlet } from "react-router";
+import { Outlet } from "react-router";
+import Header from "../components/Header";
 
 export default function Root() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/portfolio">Portfolio</Link>
-      </nav>
+      <Header />
       <main>
         <Outlet />
       </main>
