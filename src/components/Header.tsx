@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 type NavLinksProps = {
   onClick?: () => void;
@@ -9,18 +10,46 @@ type NavLinksProps = {
 const NavLinks = ({ onClick }: NavLinksProps) => {
   return (
     <>
-      <Link to="/" onClick={onClick} className="mx-2">
+      <NavLink
+        to="/"
+        end
+        onClick={onClick}
+        className={({ isActive }) =>
+          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+        }
+      >
         Home
-      </Link>
-      <Link to="/portfolio" onClick={onClick} className="mx-2">
+      </NavLink>
+      <NavLink
+        to="/portfolio"
+        end
+        onClick={onClick}
+        className={({ isActive }) =>
+          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+        }
+      >
         Portfolio
-      </Link>
-      <Link to="/cv" onClick={onClick} className="mx-2">
+      </NavLink>
+      <NavLink
+        to="/cv"
+        end
+        onClick={onClick}
+        className={({ isActive }) =>
+          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+        }
+      >
         CV
-      </Link>
-      <Link to="/about" onClick={onClick} className="mx-2">
+      </NavLink>
+      <NavLink
+        to="/about"
+        end
+        onClick={onClick}
+        className={({ isActive }) =>
+          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+        }
+      >
         About
-      </Link>
+      </NavLink>
     </>
   );
 };
@@ -33,7 +62,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-20 border-b p-8 h-24">
+    <header className="sticky top-0 z-20 p-8 h-24">
       <nav className="flex items-center w-full px-4">
         <div className="flex-1" />
         <div className="hidden md:flex justify-center flex-1">
@@ -42,6 +71,9 @@ export default function Header() {
         <div className="flex-1 flex justify-end">
           <button className="md:hidden" onClick={toggleNavbar}>
             {isOpen ? <X /> : <Menu />}
+          </button>
+          <button className="hidden md:block bg-primary rounded-xs px-6 py-1">
+            CONTACT
           </button>
         </div>
       </nav>
