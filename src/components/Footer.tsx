@@ -2,7 +2,7 @@ const SocialLinks = () => {
   return (
     <>
       <a
-        className="mx-1"
+        className="mx-1 text-neutral-500 hover:text-primary"
         href="https://www.linkedin.com/in/johannes-flodin-2676ba21a/"
         target="_blank"
         rel="noopener noreferrer"
@@ -10,7 +10,7 @@ const SocialLinks = () => {
         LinkedIn
       </a>
       <a
-        className="mx-1"
+        className="mx-1 text-neutral-500 hover:text-primary"
         href="https://github.com/janne022"
         target="_blank"
         rel="noopener noreferrer"
