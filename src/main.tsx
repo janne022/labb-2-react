@@ -4,6 +4,7 @@ import { createHashRouter, RouterProvider } from "react-router";
 import Root from "./routes/root";
 import Home from "./routes/Home/Home";
 import Portfolio from "./routes/Portfolio/Portfolio";
+import { ThemeProvider } from "./theme-provider";
 
 const router = createHashRouter([
   {
@@ -24,6 +25,8 @@ const router = createHashRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );

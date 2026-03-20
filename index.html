@@ -5,9 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link href="/src/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>labb-2-react</title>
+    <title>Johannes Flodin</title>
+    <script>
+      // Applies dark mode without flashing the user first. Could not find a better way to solve this without server rendering :))
+      (function () {
+        try {
+          // Local storage
+          var theme = localStorage.getItem("app-theme");
+          // System preference
+          var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+          if (theme === "dark" || (theme === "system" && systemDark) || (!theme && systemDark)) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body>
+  <body class="bg-background text-foreground antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
