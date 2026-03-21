@@ -15,7 +15,7 @@ const NavLinks = ({ onClick }: NavLinksProps) => {
         end
         onClick={onClick}
         className={({ isActive }) =>
-          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+          `mx-2 ${isActive ? "text-primary underline underline-offset-4" : "text-secondary"}`
         }
       >
         Home
@@ -25,7 +25,7 @@ const NavLinks = ({ onClick }: NavLinksProps) => {
         end
         onClick={onClick}
         className={({ isActive }) =>
-          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+          `mx-2 ${isActive ? "text-primary underline underline-offset-4" : "text-secondary"}`
         }
       >
         Portfolio
@@ -35,7 +35,7 @@ const NavLinks = ({ onClick }: NavLinksProps) => {
         end
         onClick={onClick}
         className={({ isActive }) =>
-          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+          `mx-2 ${isActive ? "text-primary underline underline-offset-4" : "text-secondary"}`
         }
       >
         CV
@@ -45,7 +45,7 @@ const NavLinks = ({ onClick }: NavLinksProps) => {
         end
         onClick={onClick}
         className={({ isActive }) =>
-          `mx-2 ${isActive ? "text-primary" : "text-secondary"}`
+          `mx-2 ${isActive ? "text-primary underline underline-offset-4" : "text-secondary"}`
         }
       >
         About
@@ -64,24 +64,31 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 p-8 h-24">
       <nav className="flex items-center w-full px-4">
-        <div className="flex-1" />
+        <div className="flex-1 flex justify-start">
+          <button className="md:hidden" onClick={toggleNavbar}>
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
         <div className="hidden md:flex justify-center flex-1">
           <NavLinks onClick={() => setIsOpen(false)} />
         </div>
         <div className="flex-1 flex justify-end">
-          <button className="md:hidden" onClick={toggleNavbar}>
-            {isOpen ? <X /> : <Menu />}
-          </button>
-          <button className="hidden md:block bg-primary rounded-xs px-6 py-1">
+          <button className="bg-primary rounded-xs px-6 py-1 hover:opacity-90">
             CONTACT
           </button>
         </div>
       </nav>
-      {isOpen && (
-        <div className="fixed top-23 left-0 w-full h-[calc(100vh-6rem)] bg-background z-50 md:hidden flex flex-col items-center justify-center space-y-6">
+      <div
+        className={`fixed top-24 left-0 w-full bg-background md:hidden overflow-hidden transition-all duration-300 ease-in-out border-b border-border ${
+          isOpen
+            ? "h-[calc(100vh-6rem)] opacity-100"
+            : "h-0 opacity-0 border-transparent"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center space-y-8 h-[calc(100vh-6rem)] text-xl">
           <NavLinks onClick={() => setIsOpen(false)} />
         </div>
-      )}
+      </div>
     </header>
   );
 }
