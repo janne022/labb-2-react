@@ -7,6 +7,7 @@ import Portfolio from "./routes/Portfolio/Portfolio";
 import { ThemeProvider } from "./theme-provider";
 import CV from "./routes/CV/CV";
 import About from "./routes/About/About";
+import { ImageKitProvider } from "@imagekit/react";
 
 const router = createHashRouter([
   {
@@ -35,8 +36,10 @@ const router = createHashRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <ImageKitProvider urlEndpoint="https://ik.imagekit.io/4mzgxtohp/">
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </ImageKitProvider>
   </StrictMode>,
 );

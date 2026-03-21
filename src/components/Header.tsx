@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router";
@@ -73,7 +72,7 @@ export default function Header() {
           <NavLinks onClick={() => setIsOpen(false)} />
         </div>
         <div className="flex-1 flex justify-end">
-          <button className="bg-primary rounded-xs px-6 py-1 hover:opacity-90">
+          <button className="bg-primary text-white font-semibold rounded-xs px-7 py-2 hover:opacity-90">
             CONTACT
           </button>
         </div>
