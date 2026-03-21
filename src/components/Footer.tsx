@@ -23,9 +23,9 @@ const SocialLinks = () => {
 
 export default function Footer() {
   return (
-    <footer className="flex items-center w-full px-4">
+    <footer className="flex items-center w-full px-4 py-6 bg-background border-t border-gray-200">
       <div className="flex-1" />
-      <div className="hidden md:flex justify-center flex-1">
+      <div className="flex justify-center flex-1 text-nowrap mx-5">
         <p>©2026 All rights reserved</p>
       </div>
       <div className="flex-1 flex justify-end">

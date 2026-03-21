@@ -61,7 +61,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-20 p-8 h-24">
+    <header className="sticky top-0 z-20 p-8 h-24 bg-background">
       <nav className="flex items-center w-full px-4">
         <div className="flex-1 flex justify-start">
           <button className="md:hidden" onClick={toggleNavbar}>
@@ -72,7 +72,7 @@ export default function Header() {
           <NavLinks onClick={() => setIsOpen(false)} />
         </div>
         <div className="flex-1 flex justify-end">
-          <button className="bg-primary text-white font-semibold rounded-xs px-7 py-2 hover:opacity-90">
+          <button className="bg-primary text-white font-semibold rounded-sm px-4 py-1 sm:px-7 sm:py-2 hover:opacity-90">
             CONTACT
           </button>
         </div>

@@ -6,15 +6,15 @@ export default function Hero({ src }: { src?: string }) {
     <section className="flex-1 flex items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8">
         <article className="max-w-2xl">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-center sm:text-start justify-center sm:text-lg text-gray-600">
             Fullstack • Software Engineer • Problem Solver
           </p>
-          <h1 className="text-8xl font-bold mb-8 text-primary">
+          <h1 className="text-6xl sm:text-8xl font-bold mb-8 text-primary text-center sm:text-start">
             Building <br />
             Scalable <br />
             Systems.
           </h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
             <button className="px-6 py-3 font-semibold text-white bg-primary rounded-lg hover:bg-primary-dark transition">
               VIEW MY WORK
             </button>
@@ -23,7 +23,7 @@ export default function Hero({ src }: { src?: string }) {
             </button>
           </div>
         </article>
-        <article className="relative w-full max-w-lg mx-auto lg:max-w-none mt-12 lg:mt-0">
+        <article className="relative w-full max-w-lg mx-auto lg:max-w-none mb-10">
           <Image
             alt="Profile Image"
             width={500}
