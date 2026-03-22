@@ -2,10 +2,14 @@ import React from "react";
 import { useProjects } from "../../api/useProjects";
 import Modal from "../../components/Modal";
 import TextImageBlock from "../../components/TextImageBlock";
+import type { ProjectItem } from "../../types";
 
 export default function Portfolio() {
   const { data, isLoading } = useProjects();
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [selectedProject, setSelectedProject] =
+    React.useState<ProjectItem | null>(null);
+
+  const isModalOpen = !!selectedProject;
 
   return (
     <div className="flex flex-col min-h-screen gap-20 justify-center items-center">
@@ -20,12 +24,25 @@ export default function Portfolio() {
         </div>
       ) : (
         <>
-          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-            <h2 className="text-2xl font-bold mb-4">My Portfolio</h2>
-            <p className="text-lg">
-              Welcome to my portfolio! Here you can find information about my
-              projects and skills.
-            </p>
+          <Modal isOpen={isModalOpen} onClose={() => setSelectedProject(null)}>
+            {selectedProject && (
+              <div className="p-6">
+                <h2 className="text-2xl font-bold mb-4">
+                  {selectedProject.name}
+                </h2>
+                <p className="text-lg text-gray-600 mb-4">
+                  {selectedProject.description || "No description provided."}
+                </p>
+                <a
+                  href={selectedProject.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium hover:underline mt-auto pt-4"
+                >
+                  View Project &rarr;
+                </a>
+              </div>
+            )}
           </Modal>
           {data?.items?.map((item, index) => (
             <TextImageBlock
@@ -38,7 +55,7 @@ export default function Portfolio() {
                   alt: string;
                 }
               }
-              onButtonClick={() => setIsModalOpen(true)}
+              onButtonClick={() => setSelectedProject(item)}
               imagePosition={index % 2 === 0 ? "right" : "left"}
             />
           ))}

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Image } from "@imagekit/react";
+import { ImageIcon } from "lucide-react";
 
 type TextImageBlockProps = {
   title: string;
@@ -47,13 +48,22 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
       </div>
 
       <div className="w-full xl:w-1/2 flex justify-center">
-        <Image
-          src={image.filename}
-          alt={image.alt}
-          width={1024}
-          height={768}
-          className="w-full max-h-150 object-cover rounded-xl shadow-lg"
-        />
+        {image.filename ? (
+          <Image
+            src={image.filename}
+            alt={image.alt}
+            width={1024}
+            height={768}
+            className="w-full max-h-150 object-cover rounded-xl shadow-lg"
+          />
+        ) : (
+          <div className="w-full aspect-video max-h-150 bg-secondary/50 border-2 border-dashed border-border rounded-xl flex items-center justify-center shadow-sm">
+            <span className="text-muted-foreground font-medium flex items-center gap-2">
+              <ImageIcon size={20} />
+              No image available
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );

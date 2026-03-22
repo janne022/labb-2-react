@@ -1,25 +1,7 @@
 import axios from "axios";
 import manualProjects from "../data/manualProjects.json";
 import { useQuery } from "@tanstack/react-query";
-
-export interface Projects {
-  total_count: number;
-  items: ProjectItem[];
-}
-
-export interface ProjectItem {
-  id: number;
-  name: string;
-  full_name: string;
-  html_url: string;
-  image_url?: string;
-  description: null | string;
-  stargazers_count: number;
-  watchers_count: number;
-  language: Language | null;
-}
-
-type Language = "C#" | "HTML" | "C++" | "TypeScript";
+import type { Projects } from "../types";
 
 // Fetch projects from github and combine them with manual json file
 const fetchProjects = async (): Promise<Projects> => {

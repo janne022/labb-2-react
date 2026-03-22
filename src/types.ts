@@ -1,3 +1,24 @@
+// Project Types
+export interface Projects {
+  total_count: number;
+  items: ProjectItem[];
+}
+
+export interface ProjectItem {
+  id: number;
+  name: string;
+  full_name: string;
+  html_url: string;
+  image_url?: string;
+  description: null | string;
+  stargazers_count: number;
+  watchers_count: number;
+  language: Language | null;
+}
+
+type Language = "C#" | "HTML" | "C++" | "TypeScript";
+
+// CV Types
 export interface Cv {
   picture: Picture;
   basics: Basics;
@@ -28,7 +49,7 @@ export interface Sections {
   profiles: Profiles;
   experience: Experience;
   education: Summary;
-  projects: Projects;
+  projects: CvProjects;
   skills: Skills;
   languages: Languages;
   interests: Interests;
@@ -125,7 +146,7 @@ export interface ProfilesItem {
   website: Website;
 }
 
-export interface Projects {
+export interface CvProjects {
   title: string;
   columns: number;
   hidden: boolean;
