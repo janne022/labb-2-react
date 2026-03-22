@@ -1,6 +1,7 @@
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router";
+import { useTheme } from "../theme-provider";
 
 type NavLinksProps = {
   onClick?: () => void;
@@ -55,6 +56,11 @@ const NavLinks = ({ onClick }: NavLinksProps) => {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -72,6 +78,12 @@ export default function Header() {
           <NavLinks onClick={() => setIsOpen(false)} />
         </div>
         <div className="flex-1 flex justify-end">
+          <button
+            className="mr-4 bg-secondary/20 text-secondary hover:bg-secondary/30 rounded-sm p-2 transition-colors"
+            onClick={toggleTheme}
+          >
+            {theme === "light" ? <Moon /> : <Sun />}
+          </button>
           <button className="bg-primary text-white font-semibold rounded-sm px-3 py-1 sm:px-7 sm:py-2 hover:opacity-90">
             CONTACT
           </button>
