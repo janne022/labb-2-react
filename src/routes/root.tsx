@@ -45,12 +45,6 @@ export default function Root() {
               <p className="text-lg text-gray-600 mb-4">
                 You found the Easter Egg! 🥚
               </p>
-              <button
-                className="px-6 py-2 bg-primary hover:bg-primary-hover text-white rounded transition-colors"
-                onClick={() => setShowEasterEgg(false)}
-              >
-                Close
-              </button>
             </div>
           </Modal>
         )}
