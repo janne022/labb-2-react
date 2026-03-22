@@ -3,23 +3,23 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero({ src }: { src?: string }) {
   return (
-    <section className="flex-1 flex items-center justify-center">
+    <section className="flex-1 flex items-center justify-center w-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8">
         <article className="max-w-2xl">
-          <p className="text-sm text-center sm:text-start justify-center sm:text-lg text-gray-600">
+          <p className="text-xs text-center sm:text-start justify-center sm:text-lg text-gray-600">
             Fullstack • Software Engineer • Problem Solver
           </p>
-          <h1 className="text-6xl sm:text-8xl font-bold mb-8 text-primary text-center sm:text-start">
+          <h1 className="text-6xl sm:text-8xl font-bold mb-8 text-primary text-center sm:text-start leading-[1.1] tracking-tight">
             Building <br />
             Scalable <br />
             Systems.
           </h1>
-          <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
-            <button className="px-6 py-3 font-semibold text-white bg-primary rounded-lg hover:bg-primary-dark transition">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+            <button className="px-3 py-2 sm:px-6 sm:py-3 mx-auto sm:mx-0 font-semibold text-white bg-primary hover:bg-primary-hover rounded-lg transition focus:ring-2 focus:ring-offset-2 focus:ring-primary">
               VIEW MY WORK
             </button>
-            <button className="px-6 py-3 font-semibold text-black bg-secondary rounded-lg hover:bg-secondary-dark transition">
-              CONTACT ME
+            <button className="px-3 py-2 sm:px-6 sm:py-3 mx-auto sm:mx-0 font-semibold text-black bg-surface-alt hover:bg-surface-alt-hover rounded-lg transition focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+              GET IN TOUCH
             </button>
           </div>
         </article>
@@ -30,7 +30,7 @@ export default function Hero({ src }: { src?: string }) {
             height={500}
             src={src || "/profile.jpg"}
           />
-          <div className="absolute z-10 -bottom-8 -left-4 sm:-left-8 bg-background backdrop-blur-sm p-6 shadow-2xl rounded-sm w-64">
+          <div className="absolute z-10 -bottom-8 sm:-left-8 bg-background backdrop-blur-sm p-6 shadow-2xl rounded-sm w-64">
             <h3 className="text-xl font-bold mb-3">Johannes Flodin</h3>
             <div className="flex gap-4">
               <a

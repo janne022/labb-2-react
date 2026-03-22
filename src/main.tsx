@@ -8,6 +8,7 @@ import { ThemeProvider } from "./theme-provider";
 import CV from "./routes/CV/CV";
 import About from "./routes/About/About";
 import { ImageKitProvider } from "@imagekit/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const router = createHashRouter([
   {
@@ -34,12 +35,16 @@ const router = createHashRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ImageKitProvider urlEndpoint="https://ik.imagekit.io/4mzgxtohp/">
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </ImageKitProvider>
+    <QueryClientProvider client={queryClient}>
+      <ImageKitProvider urlEndpoint="https://ik.imagekit.io/4mzgxtohp/">
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </ImageKitProvider>
+    </QueryClientProvider>
   </StrictMode>,
 );

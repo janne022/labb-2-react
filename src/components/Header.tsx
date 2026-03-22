@@ -72,7 +72,7 @@ export default function Header() {
           <NavLinks onClick={() => setIsOpen(false)} />
         </div>
         <div className="flex-1 flex justify-end">
-          <button className="bg-primary text-white font-semibold rounded-sm px-4 py-1 sm:px-7 sm:py-2 hover:opacity-90">
+          <button className="bg-primary text-white font-semibold rounded-sm px-3 py-1 sm:px-7 sm:py-2 hover:opacity-90">
             CONTACT
           </button>
         </div>
