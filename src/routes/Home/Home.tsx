@@ -53,13 +53,18 @@ export default function Home() {
         ),
       }))
     : [];
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
   return (
     <div className="flex flex-col min-h-screen gap-20">
       <Hero src="/profile.jpg" />
-      <BentoGrid items={bentoItems} />
+      {isLoading ? (
+        <div className="w-full flex justify-center items-center h-100">
+          <p className="text-lg text-gray-500 animate-pulse font-semibold">
+            Loading highlighted works...
+          </p>
+        </div>
+      ) : (
+        <BentoGrid items={bentoItems} />
+      )}
     </div>
   );
 }

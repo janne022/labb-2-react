@@ -32,7 +32,6 @@ const fetchProjects = async (): Promise<Projects> => {
     );
 
     response.data.items = [...manualProject.items, ...response.data.items];
-
     return response.data;
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
