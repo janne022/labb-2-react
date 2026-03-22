@@ -3,11 +3,18 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Modal from "../components/Modal";
+import { useTheme } from "../theme-provider";
 
 export default function Root() {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [buffer, setBuffer] = useState<string>("");
+  const { theme, setTheme } = useTheme();
   const secretCode = "1337";
+
+  // Super funny easter egg
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   // Super funny easter egg
   useEffect(() => {
@@ -47,6 +54,11 @@ export default function Root() {
             </div>
           </Modal>
         )}
+        <button
+          className="absolute top-0 left-0 w-10 h-10 opacity-0 z-100"
+          onClick={toggleTheme}
+          aria-label="Easter Egg button"
+        />
         <Outlet />
       </main>
       <Footer />
