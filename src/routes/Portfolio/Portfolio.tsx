@@ -8,8 +8,10 @@ export default function Portfolio() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen gap-20">
-      <h1 className="text-5xl font-bold text-primary mt-12 mx-5">Portfolio</h1>
+    <div className="flex flex-col min-h-screen gap-20 justify-center items-center">
+      <h1 className="text-5xl font-bold text-primary mt-12 text-center">
+        Portfolio
+      </h1>
       {isLoading ? (
         <div className="w-full flex justify-center items-center h-100">
           <p className="text-lg text-gray-500 animate-pulse font-semibold">
@@ -25,7 +27,7 @@ export default function Portfolio() {
               projects and skills.
             </p>
           </Modal>
-          {data?.items?.map((item) => (
+          {data?.items?.map((item, index) => (
             <TextImageBlock
               key={item.id}
               title={item.name}
@@ -37,6 +39,7 @@ export default function Portfolio() {
                 }
               }
               onButtonClick={() => setIsModalOpen(true)}
+              imagePosition={index % 2 === 0 ? "right" : "left"}
             />
           ))}
         </>
