@@ -12,6 +12,7 @@ export interface ProjectItem {
   name: string;
   full_name: string;
   html_url: string;
+  image_url?: string;
   description: null | string;
   stargazers_count: number;
   watchers_count: number;
@@ -30,7 +31,7 @@ const fetchProjects = async (): Promise<Projects> => {
       `https://api.github.com/search/repositories?q=user:${username}+fork:false&sort=stars&order=desc&per_page=1`,
     );
 
-    response.data.items = [...response.data.items, ...manualProject.items];
+    response.data.items = [...manualProject.items, ...response.data.items];
 
     return response.data;
   } catch (error: unknown) {
