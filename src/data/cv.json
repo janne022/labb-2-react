@@ -1,0 +1,335 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "https://rxresu.me/uploads/019bef8d-9bb5-751b-83a6-8f18a6e03600/pictures/1772447576134.webp",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 15,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Johannes Flodin",
+    "headline": ".NET Fullstack Student",
+    "email": "Johannes.Flodin@gmail.com",
+    "customFields": []
+  },
+  "summary": {
+    "title": "Sammanfattning",
+    "columns": 1,
+    "hidden": false,
+    "content": "<h3>Sammanfattning</h3><hr><p style=\"text-align: left;\">Webbfokuserad fullstack .NET student. Bygger och shippar fulla features självständigt från idé till deploy. Har produktionserfarenhet i React och Next.js och integrerar APIer och backend själv. Gillar typed frontend och clean domain kod.  Erfarenhet av att lösa tekniska problem, ge support och arbeta agilt.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiler",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "rstlp5ihzbruov88d6h2w7h5",
+          "hidden": false,
+          "icon": "github",
+          "network": "Github",
+          "username": "janne022",
+          "website": {
+            "url": "https://github.com/janne022",
+            "label": ""
+          }
+        },
+        {
+          "id": "d7nvhwepmf78bcd9qpy427mq",
+          "hidden": false,
+          "icon": "Linkedin",
+          "network": "Linkedin",
+          "username": "johannes-flodin-2676ba21a",
+          "website": {
+            "url": "https://www.linkedin.com/in/johannes-flodin-2676ba21a/",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Erfarenhet",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "m4sa1v7bgmzip3ikx7swfaqv",
+          "hidden": false,
+          "company": "Grön Stad Mark och Anläggning AB",
+          "position": "Trädgårdsarbetare, Säsongsbetonad",
+          "location": "Stockholm, Sverige",
+          "period": "Augusti 2021 - Augusti 2021",
+          "website": {
+            "url": "https://gronstad.se/",
+            "label": ""
+          },
+          "description": "",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Utbildning",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "b2hsxeuw85nl1grfhqscc94j",
+          "hidden": false,
+          "school": "NTI Gymnasiet",
+          "degree": "Gymnasium",
+          "area": "Teknikprogrammet",
+          "grade": "",
+          "location": "",
+          "period": "Augusti 2018 - Juni 2021",
+          "website": {
+            "url": "https://ntigymnasiet.se/stockholm-odenplan/program/spets-spelutveckling/",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "cdoeo8z33ysn7kaztbjlmw8h",
+          "hidden": false,
+          "school": "Stockholms Universitet, Stockholm",
+          "degree": "Universitet",
+          "area": "Data- och Systemutveckling",
+          "grade": "",
+          "location": "",
+          "period": "Augusti 2021 - Juni 2024",
+          "website": {
+            "url": "https://utbildning.su.se/utbildning/utbildningskatalog/sy/sysdk",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "tk8f03vzbggp2ladt1bxq9i1",
+          "hidden": false,
+          "school": "Chas Academy, Stockholm",
+          "degree": "Yrkeshögskola",
+          "area": ".NET Fullstackutvecklare",
+          "grade": "",
+          "location": "",
+          "period": "September 2025 - Juni 2027",
+          "website": {
+            "url": "https://chasacademy.se/program/fullstackutvecklare-net",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projekt",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "q1h4gz2krqobfu5wo3x1l136",
+          "hidden": false,
+          "name": "Andaluz Casa",
+          "period": "",
+          "website": {
+            "url": "https://www.andaluz.casa/sv/home/",
+            "label": ""
+          },
+          "description": "<p><strong>Tekniker &amp; Verktyg:</strong> Next.js, TypeScript, Tailwind, shadcn, Storyblok, Google Maps API, iCal, Zod, Upstash RL, Cloudflare Turnstile, CI/CD via Vercel</p><p><strong>Resultat:</strong> En komplett och responsiv webbplats för bostadsuthyrning med fokus på användarvänlighet och modern teknik.</p>"
+        },
+        {
+          "id": "tjhym9hp7dmm98thl7a4mf3o",
+          "hidden": false,
+          "name": "Blackbird",
+          "period": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p><strong>Teknik:</strong> Flutter, Dart, Firebase Auth, Firestore, Google Maps, Rest API integration</p><p><strong>Outcome:</strong> Shippad app. Ledde ett litet dev team och levererade funktioner iterativt i sprintformat.</p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "we7grdgi9q7p7rzlmodp583h",
+          "hidden": false,
+          "icon": "",
+          "name": "Systemutveckling",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "C#",
+            "Javascript",
+            "Typescript",
+            "ASP.NET",
+            "HTML",
+            "CSS",
+            "React",
+            "Java",
+            "SQL",
+            "Entity Framework",
+            "Messaging"
+          ]
+        },
+        {
+          "id": "j008j3esjtx73bvslfumpjfi",
+          "hidden": false,
+          "icon": "",
+          "name": "Verktyg",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Git",
+            "Docker",
+            "Linux",
+            "Windows",
+            "Cloudflare",
+            "Azure"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Språk",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "dtdccbv3fs2a45cp0tb42egg",
+          "hidden": false,
+          "language": "Engelska",
+          "fluency": "",
+          "level": 5
+        },
+        {
+          "id": "d1ctjwr937ua97agr3rz0lvk",
+          "hidden": false,
+          "language": "Svenska",
+          "fluency": "",
+          "level": 5
+        }
+      ]
+    },
+    "interests": {
+      "title": "Intressen",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "s4gmw0pxe2gqcu612mxbwhiv",
+          "hidden": false,
+          "icon": "",
+          "name": "Tekniska",
+          "keywords": [
+            "Datorer",
+            "Programmering",
+            "Fullstackutveckling"
+          ]
+        }
+      ]
+    },
+    "references": {
+      "title": "Referenser",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "ubon9wluv33puksobi57lr4k",
+          "hidden": false,
+          "name": "Grön Stad och Mark AB",
+          "position": "Linnea Elg",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "phone": "",
+          "description": "<p>\"Johannes har skött sina arbetsuppgifter och varit en god kollega till resterande i gruppen. Johannes är noggrann i sitt arbete och visar god initiativförmåga.\"</p>"
+        }
+      ]
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "gengar",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "education",
+            "experience",
+            "projects",
+            "volunteer",
+            "references"
+          ],
+          "sidebar": [
+            "profiles",
+            "skills",
+            "interests",
+            "certifications",
+            "awards",
+            "publications",
+            "languages"
+          ]
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 18,
+      "marginY": 18,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(8, 145, 178, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "400",
+          "600"
+        ],
+        "fontSize": 10.5,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 13.5,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}

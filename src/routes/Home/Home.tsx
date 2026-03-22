@@ -8,10 +8,10 @@ export default function Home() {
 
   // 4 bento boxes with various sizes abd colors
   const layoutPattern = [
-    "md:col-span-2 md:row-span-3 bg-white",
-    "md:col-span-1 md:row-span-5 bg-primary text-white",
-    "md:col-span-1 md:row-span-2 bg-surface-alt text-gray-900",
-    "md:col-span-1 md:row-span-2 bg-white text-gray-900",
+    "md:col-span-2 md:row-span-3 bg-surface hover:bg-surface-hover shadow-lg",
+    "md:col-span-1 md:row-span-5 bg-primary hover:bg-primary-hover text-white shadow-lg",
+    "md:col-span-1 md:row-span-2 bg-surface-alt hover:bg-surface-alt-hover text-gray-900 shadow-lg",
+    "md:col-span-1 md:row-span-2 bg-surface hover:bg-surface-hover shadow-lg",
   ];
   const bentoItems = data
     ? // We slice to 4 of total projects
@@ -24,7 +24,7 @@ export default function Home() {
             href={project.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col h-full w-full p-6 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+            className="flex flex-col h-full w-full p-6 rounded-2xl"
           >
             <h3 className="text-xl md:text-2xl font-bold mb-2">
               {project.name}
@@ -56,15 +56,20 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen gap-20">
       <Hero src="/profile.jpg" />
-      {isLoading ? (
-        <div className="w-full flex justify-center items-center h-100">
-          <p className="text-lg text-gray-500 animate-pulse font-semibold">
-            Loading highlighted works...
-          </p>
-        </div>
-      ) : (
-        <BentoGrid items={bentoItems} />
-      )}
+      <div>
+        <h1 className="text-5xl font-bold text-primary mb-14 mx-auto w-max">
+          Selected Projects
+        </h1>
+        {isLoading ? (
+          <div className="w-full flex justify-center items-center h-100">
+            <p className="text-lg text-gray-500 animate-pulse font-semibold">
+              Loading highlighted works...
+            </p>
+          </div>
+        ) : (
+          <BentoGrid items={bentoItems} />
+        )}
+      </div>
     </div>
   );
 }

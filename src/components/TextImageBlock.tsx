@@ -9,7 +9,7 @@ type TextImageBlockProps = {
   containerClassName?: string;
   textAreaClassName?: string;
   buttonLabel?: string;
-  buttonLink?: string;
+  onButtonClick?: () => void;
 };
 
 const TextImageBlock: React.FC<TextImageBlockProps> = ({
@@ -20,11 +20,11 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
   containerClassName = "",
   textAreaClassName = "",
   buttonLabel = "Show Project",
-  buttonLink = "#",
+  onButtonClick,
 }) => {
   return (
     <div
-      className={`flex flex-col items-center gap-12 text-black w-full max-w-7xl mx-auto py-12 px-6 xl:p-12 ${
+      className={`flex flex-col items-center gap-12 w-full max-w-7xl py-12 px-6 xl:p-12 ${
         imagePosition === "left" ? "xl:flex-row-reverse" : "xl:flex-row"
       } ${containerClassName}`.trim()}
     >
@@ -36,14 +36,12 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
           <p className="text-lg xl:text-xl text-gray-600 mb-8">{text}</p>
 
           <div>
-            <a
-              href={buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
               className="px-8 py-3 bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors flex items-center justify-center font-semibold text-white"
+              onClick={onButtonClick}
             >
               {buttonLabel}
-            </a>
+            </button>
           </div>
         </article>
       </div>

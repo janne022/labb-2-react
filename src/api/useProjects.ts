@@ -1,5 +1,5 @@
 import axios from "axios";
-import manualProjects from "./manualProjects.json";
+import manualProjects from "../data/manualProjects.json";
 import { useQuery } from "@tanstack/react-query";
 
 export interface Projects {
