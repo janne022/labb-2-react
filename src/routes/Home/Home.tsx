@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen gap-20">
       <Hero src="/profile.jpg" />
-      {isLoading ? <div>Loading...</div> : <BentoGrid items={bentoItems} />}
+      <BentoGrid items={bentoItems} />
     </div>
   );
 }
