@@ -14,8 +14,7 @@
   "basics": {
     "name": "Johannes Flodin",
     "headline": ".NET Fullstack Student",
-    "email": "Johannes.Flodin@gmail.com",
-    "customFields": []
+    "email": "Johannes.Flodin@gmail.com"
   },
   "summary": {
     "title": "Sammanfattning",
@@ -69,8 +68,7 @@
             "url": "https://gronstad.se/",
             "label": ""
           },
-          "description": "",
-          "roles": []
+          "description": ""
         }
       ]
     },
@@ -257,79 +255,5 @@
         }
       ]
     }
-  },
-  "customSections": [],
-  "metadata": {
-    "template": "gengar",
-    "layout": {
-      "sidebarWidth": 35,
-      "pages": [
-        {
-          "fullWidth": false,
-          "main": [
-            "summary",
-            "education",
-            "experience",
-            "projects",
-            "volunteer",
-            "references"
-          ],
-          "sidebar": [
-            "profiles",
-            "skills",
-            "interests",
-            "certifications",
-            "awards",
-            "publications",
-            "languages"
-          ]
-        }
-      ]
-    },
-    "css": {
-      "enabled": false,
-      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
-    },
-    "page": {
-      "gapX": 4,
-      "gapY": 6,
-      "marginX": 18,
-      "marginY": 18,
-      "format": "a4",
-      "locale": "en-US",
-      "hideIcons": false
-    },
-    "design": {
-      "level": {
-        "icon": "star",
-        "type": "circle"
-      },
-      "colors": {
-        "primary": "rgba(8, 145, 178, 1)",
-        "text": "rgba(0, 0, 0, 1)",
-        "background": "rgba(255, 255, 255, 1)"
-      }
-    },
-    "typography": {
-      "body": {
-        "fontFamily": "IBM Plex Serif",
-        "fontWeights": [
-          "400",
-          "400",
-          "600"
-        ],
-        "fontSize": 10.5,
-        "lineHeight": 1.5
-      },
-      "heading": {
-        "fontFamily": "IBM Plex Serif",
-        "fontWeights": [
-          "600"
-        ],
-        "fontSize": 13.5,
-        "lineHeight": 1.5
-      }
-    },
-    "notes": ""
   }
 }

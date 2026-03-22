@@ -7,7 +7,7 @@ export default function Hero({ src }: { src?: string }) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8">
         <article className="max-w-2xl">
           <p className="text-xs text-center sm:text-start justify-center sm:text-lg text-gray-600">
-            Fullstack • Software Engineer • Problem Solver
+            Fullstack &bull; Software Engineer &bull; Problem Solver
           </p>
           <h1 className="text-6xl sm:text-8xl font-bold mb-8 text-primary text-center sm:text-start leading-[1.1] tracking-tight">
             Building <br />
