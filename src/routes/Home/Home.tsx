@@ -8,8 +8,8 @@ export default function Home() {
   // 4 bento boxes with various sizes abd colors
   const layoutPattern = [
     "md:col-span-2 md:row-span-3 bg-blue-500 text-white",
-    "md:col-span-1 md:row-span-5 bg-blue-900 text-white",
-    "md:col-span-1 md:row-span-2 bg-gray-200 text-gray-900",
+    "md:col-span-1 md:row-span-5 bg-primary text-white",
+    "md:col-span-1 md:row-span-2 bg-surface-alt text-gray-900",
     "md:col-span-1 md:row-span-2 bg-white text-gray-900",
   ];
   const bentoItems = data
