@@ -84,9 +84,12 @@ export default function Header() {
           >
             {theme === "light" ? <Moon /> : <Sun />}
           </button>
-          <button className="bg-primary text-white font-semibold rounded-sm px-3 py-1 sm:px-7 sm:py-2 hover:opacity-90">
+          <a
+            href="mailto:johannes.flodin@gmail.com"
+            className="bg-primary text-white font-semibold rounded-sm px-3 py-1 sm:px-7 sm:py-2 hover:opacity-90"
+          >
             CONTACT
-          </button>
+          </a>
         </div>
       </nav>
       <div

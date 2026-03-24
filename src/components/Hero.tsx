@@ -1,5 +1,6 @@
 import { Image } from "@imagekit/react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router";
 
 export default function Hero({ src }: { src?: string }) {
   return (
@@ -15,12 +16,18 @@ export default function Hero({ src }: { src?: string }) {
             Systems.
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-            <button className="px-3 py-2 sm:px-6 sm:py-3 mx-auto sm:mx-0 font-semibold text-white bg-primary hover:bg-primary-hover rounded-lg transition focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+            <Link
+              to="/portfolio"
+              className="px-3 py-2 sm:px-6 sm:py-3 mx-auto sm:mx-0 font-semibold text-white bg-primary hover:bg-primary-hover rounded-lg transition focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            >
               VIEW MY WORK
-            </button>
-            <button className="px-3 py-2 sm:px-6 sm:py-3 mx-auto sm:mx-0 font-semibold text-black bg-surface-alt hover:bg-surface-alt-hover rounded-lg transition focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+            </Link>
+            <a
+              href="mailto:johannes.flodin@gmail.com"
+              className="px-3 py-2 sm:px-6 sm:py-3 mx-auto sm:mx-0 font-semibold text-black bg-surface-alt hover:bg-surface-alt-hover rounded-lg transition focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
+            >
               GET IN TOUCH
-            </button>
+            </a>
           </div>
         </article>
         <article className="relative w-full max-w-lg mx-auto lg:max-w-none mb-10">
