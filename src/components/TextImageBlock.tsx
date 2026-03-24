@@ -38,7 +38,7 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
 
           <div>
             <button
-              className="px-8 py-3 bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors flex items-center justify-center font-semibold text-white"
+              className="px-8 py-3 bg-primary cursor-pointer hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors flex items-center justify-center font-semibold text-white"
               onClick={onButtonClick}
             >
               {buttonLabel}
