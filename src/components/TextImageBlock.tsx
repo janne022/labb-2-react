@@ -34,7 +34,7 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
       >
         <article className="flex flex-col items-start w-full">
           <h2 className="text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
-          <p className="text-lg xl:text-xl text-gray-600 mb-8">{text}</p>
+          <p className="text-lg xl:text-xl mb-8">{text}</p>
 
           <div>
             <button
